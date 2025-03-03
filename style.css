@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    background: url('/img/bg-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.291);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header .logo {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* Hamburger Toggle Styles */
+.toggle-btn {
+    display: none;
+    width: 30px;
+    height: 25px;
+    padding-right: 20px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 0;
+}
+
+.toggle-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-btn span:nth-child(3) {
+    bottom: 0;
+}
+
+.toggle-btn.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.toggle-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-btn.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.menus-wallpaper a {
+    color: rgb(130, 130, 130);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menus-wallpaper a:hover {
+    color: #348c9f;
+    transform: translateY(-2px);
+}
+
+.menus-wallpaper a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menus-wallpaper a:hover::after {
+    width: 100%;
+}
+
+.hero-content-profile {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: slideLeft 1s ease-in-out;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-right {
+    flex: 2;
+}
+
+.profile-content img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-content img:hover {
+    transform: scale(1.05);
+}
+
+.hero-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.title-sub span {
+    display: inline-block;
+    background: #ff9d00;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.title-sub span:nth-child(2) {
+    background: #007bf5;
+}
+
+.info-des {
+    line-height: 1.6;
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+    background: rgba(249, 249, 249, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: slideRight 1s ease-in-out;
+}
+
+.skills-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.skills-section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #6e48aa;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.skill-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    color: white;
+}
+
+.skill-item h3 {
+    font-size: 16px;
+    color: #6e48aa;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover h3 {
+    color: white;
+}
+
+.img-skill img {
+    max-width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .img-skill img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+
+/* รองรับขนาด้นาจอ 760px */
+@media (max-width: 768px) {
+    .hero-content-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .menus-wallpaper {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(243, 243, 243, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .menus-wallpaper.active {
+        display: flex;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    .menus-wallpaper a {
+        margin: 10px 0;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .skill-item {
+        padding: 15px;
+    }
+
+    .img-skill img {
+        max-width: 50px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .skills-section h2 {
+        font-size: 24px;
+    }
+
+    .skill-item h3 {
+        font-size: 14px;
+    }
+}
+
+/* ส่วนอนิเมชั่น */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
